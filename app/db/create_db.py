@@ -1,6 +1,6 @@
-from db import engine
+from db_config import engine
 import asyncio
-from models import Base
+from app.models import Base
 
 
 async def create_db():
