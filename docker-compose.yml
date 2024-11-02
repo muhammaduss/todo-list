@@ -1,7 +1,7 @@
 services:
   web:
-    build: ./application
-    command: bash -c "python3 create_db.py && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+    build: ./app
+    command: bash -c "python3 db.create_db.py && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
     ports:
       - 8000:8000
     env_file:
